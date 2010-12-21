@@ -510,7 +510,7 @@ module AWS
       #  # => 'audio/mpeg'
       #  some_object.store
       def about
-        stored? ? self.class.about(key, bucket.name) : About.new
+        stored? ? self.class.about(key, bucket.name) : About.new({})
       end
       memoized :about
       
